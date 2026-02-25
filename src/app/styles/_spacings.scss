@@ -1,0 +1,62 @@
+$spacings: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  16: 4rem,
+  20: 5rem,
+  24: 6rem,
+  32: 8rem,
+  40: 10rem,
+  48: 12rem,
+  56: 14rem,
+  64: 16rem,
+  auto: auto
+);
+
+$sides: (
+  '': '',
+  // for all sides
+  't': '-top',
+  'r': '-right',
+  'b': '-bottom',
+  'l': '-left',
+  'x': '-left -right',
+  'y': '-top -bottom'
+);
+
+@use "sass:map";
+@use "sass:string";
+
+@each $type, $prop in (p: padding, m: margin) {
+  @each $side-key, $side-value in $sides {
+    @each $key, $value in $spacings {
+      @if $key !=auto or $type !=p {
+
+        // padding-auto doesn't make sense
+        .#{$type}#{$side-key}-#{$key} {
+          @each $side in string.split($side-value, ' ') {
+            #{$prop}#{$side}: if(sass($key ==auto): auto; else: if(sass(string.index("#{$key}", "-")==1): -$value; else: $value));
+          }
+        }
+      }
+    }
+  }
+}
+
+// Negative margins
+@each $side-key, $side-value in $sides {
+  @each $key, $value in map.remove($spacings, 0, auto) {
+    .-m#{$side-key}-#{$key} {
+      @each $side in string.split($side-value, ' ') {
+        margin#{$side}: -$value;
+      }
+    }
+  }
+}

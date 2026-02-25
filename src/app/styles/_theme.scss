@@ -1,0 +1,41 @@
+.fancy-text-shadow {
+    text-shadow: .07em .07em 0px #0a090f, .1em .1em 0px var(--light-orange), .15em .15em 0 var(--pink);
+}
+
+.fancy-box-shadow {
+    box-shadow: .2em .2em 0px #fff, .4em .4em 0px var(--light-orange), .6em .6em 0 var(--pink);
+}
+
+.fancy-drop-shadow {
+    filter: drop-shadow(.2em .2em 0px #fff) drop-shadow(.4em .4em 0px var(--pink)) drop-shadow(.4em .4em 0px var(--retro-red)) drop-shadow(.6em .6em 0 var(--orange));
+}
+
+// buttons
+.dual-btns {
+    display: flex;
+    gap: 1rem;
+    @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+    &.btn-primary {
+        background-color: var(--light-orange);
+        color: var(--black);
+        border: 2px solid #fff;
+
+        &:hover {
+            background-color: var(--light-orange);
+            color: var(--black);
+            box-shadow: .2em .2em 0px #fff, .4em .4em 0px var(--light-orange), .6em .6em 0 var(--pink);
+        }
+    }
+}
