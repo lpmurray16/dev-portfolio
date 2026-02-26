@@ -1,7 +1,8 @@
 <div id="Contact" class="flex flex-col justify-center align-center">
     <h2>Contact Me</h2>
     <p>Reach out for any questions</p>
-    <form name="contactForm" method="POST" data-netlify="true" class="flex flex-col">
+    <form name="contactForm" method="POST" action="/" data-netlify="true" class="flex flex-col">
+        <input type="hidden" name="form-name" value="contactForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Harry Potter" required>
         <label for="email">Email:</label>

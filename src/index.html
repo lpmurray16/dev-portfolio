@@ -34,6 +34,12 @@
 
 <body>
   <app-root></app-root>
+  <form name="contactForm" method="POST" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="contactForm">
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <textarea name="message"></textarea>
+  </form>
 </body>
 
 </html>
