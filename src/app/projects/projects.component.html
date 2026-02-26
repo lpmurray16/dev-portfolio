@@ -1,0 +1,18 @@
+<section class="page-shell">
+  <div class="themed-panel">
+   <h1 class="fancy-text-shadow">Projects</h1>
+  <p>
+    Completed and ongoing projects from my old portfolio. More are listed on
+    <a href="https://github.com/lpmurray16" target="_blank" rel="noopener noreferrer">GitHub</a>.
+  </p> 
+  <small>Due to the policy of some free hosting tools some of these projects may not be "active" anymore.</small>
+  </div>
+  
+
+  <div class="project-grid">
+    @for (project of projects; track project.title) {
+    <project-card [title]="project.title" [description]="project.description"
+      [projectUrl]="project.projectUrl"></project-card>
+    }
+  </div>
+</section>

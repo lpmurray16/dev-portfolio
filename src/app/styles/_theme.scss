@@ -1,5 +1,6 @@
 .fancy-text-shadow {
     text-shadow: .07em .07em 0px #0a090f, .1em .1em 0px var(--light-orange), .15em .15em 0 var(--pink);
+    letter-spacing: 0.05em;
 }
 
 .fancy-box-shadow {
@@ -13,7 +14,8 @@
 // buttons
 .dual-btns {
     display: flex;
-    gap: 1rem;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    margin-top: 1rem;
     @media screen and (max-width: 768px) {
         flex-wrap: wrap;
         justify-content: center;

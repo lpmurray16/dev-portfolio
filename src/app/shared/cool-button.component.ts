@@ -1,13 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   standalone: true,
   imports: [],
   selector: 'cool-button',
   template: `
-    <button class="button">
+    <a
+      class="button"
+      [attr.href]="href || null"
+      [attr.download]="download || null"
+      [attr.target]="target || null"
+      [attr.rel]="target === '_blank' ? 'noopener noreferrer' : null"
+      [attr.role]="href ? null : 'button'"
+      [attr.aria-disabled]="href ? null : 'true'"
+    >
       <ng-content></ng-content>
-    </button>
+    </a>
   `,
   styles: `
     .button {
@@ -20,11 +28,13 @@ import { Component, OnInit } from '@angular/core';
       /* ui */
       border: none;
       cursor: pointer;
-      display: inline-block;
-      padding: 12px 35px;
-      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 10px 30px;
       background: var(--orange);
       color: #fff;
+      text-decoration: none;
       box-shadow:
         0 0 0 3px #ffffffff,
         0 6px 0 #ffffffff;
@@ -70,6 +80,10 @@ import { Component, OnInit } from '@angular/core';
   `,
 })
 export class CoolButtonComponent implements OnInit {
+  @Input() href?: string;
+  @Input() download?: string;
+  @Input() target?: '_blank' | '_self' | '_parent' | '_top';
+
   constructor() {}
 
   ngOnInit() {}

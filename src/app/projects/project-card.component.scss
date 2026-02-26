@@ -1,0 +1,49 @@
+:host {
+  display: inline-flex;
+  height: 100%;
+  width: 320px;
+  margin: 0.75rem;
+  @media (max-width: 800px) {
+    flex-grow: 1;
+  }
+}
+
+.project-card {
+  border: 2px solid #fff;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgb(17 18 25 / 88%), rgb(10 11 20 / 95%));
+  box-shadow: 0.25rem 0.25rem 0 #fff, 0.5rem 0.5rem 0 var(--pink);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  height: 100%;
+}
+
+.project-card h2 {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  color: var(--yellow);
+  font-size: 1.1rem;
+}
+
+.project-card p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.project-card a {
+  margin-top: auto;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: #111219;
+  background: var(--light-orange);
+  border: 2px solid #fff;
+  padding: 0.35rem 0.6rem;
+  box-shadow: 0.15rem 0.15rem 0 #fff, 0.3rem 0.3rem 0 var(--pink);
+}
+
+.project-card a:hover {
+  background: var(--yellow);
+}

@@ -3,11 +3,27 @@
     <p>Reach out for any questions</p>
     <form name="contactForm" method="POST" data-netlify="true" class="flex flex-col">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" placeholder="Harry Potter" required>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="harrypotter@hogwarts.com" required>
         <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        <button type="submit">Send</button>
+        <textarea id="message" name="message" rows="4" placeholder="You're brilliant!" required></textarea>
+        <div class="flex justify-center">
+            <button type="submit">Send</button>
+        </div>
     </form>
+
+    <div class="contact-links" aria-label="Contact links">
+        <a href="mailto:logan@logan-murray.dev" aria-label="Email Logan" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://github.com/lpmurray16" target="_blank" rel="noopener noreferrer" aria-label="Logan's GitHub"
+            title="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/log-mur16" target="_blank" rel="noopener noreferrer"
+            aria-label="Logan's LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
 </div>

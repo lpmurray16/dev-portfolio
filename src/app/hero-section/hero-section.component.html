@@ -1,5 +1,6 @@
 <div class="hero">
     <div class="left-content">
+        <span class="hero-kicker">Elgin, IL · Software Engineer</span>
         <h1 class="fancy-text-shadow">Logan Murray</h1>
         <h2>Software Engineer</h2>
         <p>
@@ -7,9 +8,15 @@
             beautiful and functional websites. I love to solve
             problems and create new things.
         </p>
+        <div class="hero-meta">
+            <span>BS Computer Science</span>
+            <span>Frontend + Full-Stack</span>
+        </div>
         <div class="dual-btns">
-            <cool-button>About Me</cool-button>
-            <cool-button>Resume</cool-button>
+            <cool-button [routerLink]="['/about']">About Me</cool-button>
+            <cool-button href="assets/logan_recent_resume.pdf" download="Logan_Murray_Resume.pdf">
+                <i class="fa-solid fa-download"></i>Resume
+            </cool-button>
         </div>
     </div>
     <div class="right-content">

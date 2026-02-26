@@ -1,0 +1,169 @@
+:host {
+    display: block;
+    padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+#Contact {
+    width: min(36rem, 92vw);
+    margin: 0 auto;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 3px solid #fff;
+    border-radius: 0.35rem;
+    background:
+        linear-gradient(135deg, rgb(17 18 25 / 92%), rgb(10 11 20 / 95%)),
+        repeating-linear-gradient(45deg,
+            rgb(255 255 255 / 5%) 0,
+            rgb(255 255 255 / 5%) 8px,
+            transparent 8px,
+            transparent 16px);
+    box-shadow: 0.45rem 0.45rem 0 0 #fff, 0.9rem 0.9rem 0 0 var(--light-orange), 1.35rem 1.35rem 0 0 var(--pink);
+    position: relative;
+    align-items: stretch;
+    gap: 0.85rem;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+        max-width: 25rem;
+    }
+}
+
+#Contact::before {
+    content: "";
+    position: absolute;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    top: -2rem;
+    right: -1.5rem;
+    background: radial-gradient(circle at 30% 30%, var(--yellow) 0%, var(--orange) 65%, var(--retro-red) 100%);
+    border: 2px solid #111219;
+    z-index: 0;
+}
+
+#Contact>* {
+    position: relative;
+    z-index: 1;
+}
+
+#Contact h2 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    line-height: 1;
+}
+
+#Contact p {
+    margin: 0 0 0.4rem;
+    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+    opacity: 0.9;
+}
+
+#Contact form {
+    width: 100%;
+    gap: 0.65rem;
+}
+
+#Contact label {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--yellow);
+}
+
+#Contact input,
+#Contact textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 0;
+    background: rgb(0 0 0 / 62%);
+    color: #fff;
+    padding: 0.65rem 0.7rem;
+    font: inherit;
+    box-shadow: 0.2rem 0.2rem 0 #111219;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#Contact textarea {
+    resize: vertical;
+    min-height: 7rem;
+}
+
+#Contact input:focus,
+#Contact textarea:focus {
+    outline: none;
+    border-color: var(--yellow);
+    box-shadow: 0.25rem 0.25rem 0 #fff, 0.45rem 0.45rem 0 var(--pink);
+    transform: translate(-2px, -2px);
+}
+
+#Contact button {
+    margin-top: 0.35rem;
+    align-self: flex-start;
+    border: 2px solid #fff;
+    background: var(--light-orange);
+    color: #111219;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font: inherit;
+    font-weight: 700;
+    padding: 0.7rem 1.25rem;
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0 #fff, 0.4rem 0.4rem 0 var(--pink);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+#Contact button:hover {
+    background: var(--yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 0.28rem 0.28rem 0 #fff, 0.56rem 0.56rem 0 var(--pink);
+}
+
+#Contact button:active {
+    transform: translate(0, 0);
+    box-shadow: 0.18rem 0.18rem 0 #fff;
+}
+
+.contact-links {
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-links a {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    color: #111219;
+    background: var(--light-orange);
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0.16rem 0.16rem 0 #fff, 0.32rem 0.32rem 0 var(--pink);
+    transition: transform 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease;
+}
+
+.contact-links a:hover {
+    background: var(--yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 0.22rem 0.22rem 0 #fff, 0.44rem 0.44rem 0 var(--pink);
+}
+
+.contact-links a:active {
+    transform: translate(0, 0);
+    box-shadow: 0.14rem 0.14rem 0 #fff;
+}
+
+@media screen and (max-width: 768px) {
+    #Contact {
+        box-shadow: 0.3rem 0.3rem 0 #fff, 0.65rem 0.65rem 0 var(--light-orange);
+    }
+
+    #Contact button {
+        width: 100%;
+        align-self: stretch;
+    }
+}

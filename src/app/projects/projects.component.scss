@@ -1,0 +1,33 @@
+:host {
+  display: block;
+}
+
+.page-shell {
+  width: min(70rem, 92vw);
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.page-shell>p {
+  margin: 0;
+  max-width: 62ch;
+  line-height: 1.5;
+
+  a {
+    color: var(--yellow);
+  }
+}
+
+.project-grid {
+  display: flex;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}

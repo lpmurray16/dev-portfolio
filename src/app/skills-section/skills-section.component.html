@@ -1,0 +1,18 @@
+<section class="skills-shell" aria-label="Skills and Languages">
+  <header class="skills-header">
+    <h2 class="fancy-text-shadow">Skills &amp; Languages</h2>
+    <p>
+      I am constantly building my development skills and learning something new. Here is a quick
+      breakdown of the technologies I use most.
+    </p>
+  </header>
+
+  <div class="skills-grid">
+    @for (skill of skills; track skill.title; let idx = $index) {
+      <article class="skill-card" [class.from-right]="idx % 2 === 1">
+        <h3>{{ skill.title }}</h3>
+        <p>{{ skill.description }}</p>
+      </article>
+    }
+  </div>
+</section>

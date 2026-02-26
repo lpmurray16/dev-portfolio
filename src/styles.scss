@@ -3,11 +3,25 @@
 @use 'app/styles/_theme.scss';
 @use 'app/styles/_panels.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Pixelify+Sans&display=swap');
 
 * {
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p,
+span,
+h3,
+h4,
+h5,
+h6,
+label,
+input,
+textarea, small {
+    font-family: "Anta", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -22,33 +36,28 @@
     --black: #111219;
 }
 
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: var(--black);
-    background-image: url('assets/groovy-bg.png');
+    background-image: url('assets/vertical-globs.svg');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
 
     color: #fff;
-    margin: 0;
-    padding: 0;
 }
-
-// some basic resets
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 
 main {
     margin-top: 8rem;
-    margin-bottom: 8rem;
 
     @media screen and (max-width: 768px) {
-        margin-top: 4rem;
+        margin-top: 5.5rem;
         margin-bottom: 4rem;
     }
 }
