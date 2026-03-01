@@ -1,12 +1,16 @@
-<button class="hamburger-menu" (click)="toggleMenu()">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
+<button class="scroll-tab" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isOpen"
+    aria-controls="mobile-scroll-nav" aria-label="Toggle navigation">
+    <span><i class="fas" [ngClass]="isOpen ? 'fa-chevron-right' : 'fa-chevron-left'"></i></span>
 </button>
-<nav class="groovy-nav">
-    <a routerLink="/home" (click)="isOpen = false">Home</a>
-    <a routerLink="/about" (click)="isOpen = false">About</a>
-    <a routerLink="/projects" (click)="isOpen = false">Projects</a>
-    <a routerLink="/future-goals" (click)="isOpen = false">Future Goals</a>
-    <a href="assets/logan_recent_resume.pdf" download="Logan_Murray_Resume.pdf" (click)="isOpen = false">Resume</a>
+<nav class="groovy-nav" id="mobile-scroll-nav">
+    <a routerLink="/home" routerLinkActive="active-route" [routerLinkActiveOptions]="{ exact: true }"
+        (click)="isOpen = false">Home</a>
+    <a routerLink="/about" routerLinkActive="active-route" [routerLinkActiveOptions]="{ exact: true }"
+        (click)="isOpen = false">About</a>
+    <a routerLink="/projects" routerLinkActive="active-route" [routerLinkActiveOptions]="{ exact: true }"
+        (click)="isOpen = false">Projects</a>
+    <a routerLink="/future-goals" routerLinkActive="active-route" [routerLinkActiveOptions]="{ exact: true }"
+        (click)="isOpen = false">Future Goals</a>
+    <a href="assets/logan_recent_resume.pdf" download="Logan_Murray_Resume.pdf" (click)="isOpen = false">Resume
+        <i class="fas fa-download"></i></a>
 </nav>
