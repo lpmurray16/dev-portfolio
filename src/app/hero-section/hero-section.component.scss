@@ -121,6 +121,26 @@
             .hero-meta {
                 justify-content: center;
             }
+
+            .dual-btns {
+                flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
+                gap: 1.75rem;
+
+                cool-button {
+                    display: block;
+                    width: 100%;
+
+                    /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+                    &::ng-deep .button {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                }
+            }
         }
     }
 
@@ -137,16 +157,55 @@
             order: 1;
         }
 
+        .gleam-wrapper {
+            position: relative;
+            display: inline-block;
+            border-radius: 20px;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -75%;
+                width: 50%;
+                height: 100%;
+                background: linear-gradient(
+                    120deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.45) 50%,
+                    rgba(255, 255, 255, 0) 100%
+                );
+                transform: skewX(-20deg);
+                transition: none;
+                pointer-events: none;
+            }
+
+            &:hover::after {
+                animation: gleam-sweep 0.55s ease forwards;
+            }
+        }
+
         img {
             width: min(24rem, 100%);
             height: auto;
             transform: translateY(2px);
             border-radius: 20px;
+            display: block;
             @media screen and (max-width: 768px) {
                 margin-bottom: 2rem;
                 width: min(20rem, 100%);
             }
         }
+    }
+}
+
+@keyframes gleam-sweep {
+    from {
+        left: -75%;
+    }
+    to {
+        left: 125%;
     }
 }
 

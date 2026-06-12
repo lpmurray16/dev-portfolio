@@ -17,6 +17,21 @@ export class SkillsSectionComponent implements AfterViewInit, OnDestroy {
 
   readonly skills: SkillCard[] = [
     {
+      title: 'Angular',
+      description:
+        'My current framework focus. I value its structure, tooling, and strong patterns for maintainable frontend apps.',
+    },
+    {
+      title: 'C#',
+      description:
+        'Learned quickly through prior Java/C++ fundamentals and now use it in professional backend workflows at The Flybook.',
+    },
+    {
+      title: 'MySQL',
+      description:
+        'Comfortable with relational databases and backend data modeling, including ORM-driven and direct SQL workflows.',
+    },
+    {
       title: 'HTML5 / CSS3 / JavaScript',
       description:
         'A strong foundation and still a constant growth area. Every role and personal project keeps sharpening these skills.',
@@ -37,24 +52,9 @@ export class SkillsSectionComponent implements AfterViewInit, OnDestroy {
         'Simple syntax but very capable. I use Python for quick problem solving, scripting, and practical experiments.',
     },
     {
-      title: 'MySQL',
-      description:
-        'Comfortable with relational databases and backend data modeling, including ORM-driven and direct SQL workflows.',
-    },
-    {
       title: 'WordPress',
       description:
         'Hands-on CMS experience including customization work, plugin fundamentals, and practical content-driven site delivery.',
-    },
-    {
-      title: 'Angular',
-      description:
-        'My current framework focus. I value its structure, tooling, and strong patterns for maintainable frontend apps.',
-    },
-    {
-      title: 'C#',
-      description:
-        'Learned quickly through prior Java/C++ fundamentals and now use it in professional backend workflows at The Flybook.',
     },
   ];
 

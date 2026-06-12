@@ -1,0 +1,31 @@
+<div class="carousel">
+  <div class="carousel-track-wrapper">
+    <div class="carousel-track" [style.transform]="'translateX(' + (-current * 100) + '%)'">
+      @for (slide of slides; track slide.src) {
+        <div class="carousel-slide">
+          <img [src]="slide.src" [alt]="slide.alt" loading="lazy" />
+        </div>
+      }
+    </div>
+  </div>
+
+  <button class="carousel-btn prev" (click)="prev()" aria-label="Previous photo">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button class="carousel-btn next" (click)="next()" aria-label="Next photo">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+
+  <div class="carousel-dots" role="tablist" aria-label="Photo slides">
+    @for (slide of slides; track slide.src; let i = $index) {
+      <button
+        class="dot"
+        [class.active]="i === current"
+        (click)="goTo(i)"
+        [attr.aria-label]="'Go to slide ' + (i + 1)"
+        [attr.aria-selected]="i === current"
+        role="tab"
+      ></button>
+    }
+  </div>
+</div>
