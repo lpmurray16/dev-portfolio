@@ -17,6 +17,36 @@ interface ProjectItem {
 export class ProjectsComponent {
   readonly projects: ProjectItem[] = [
     {
+      title: 'GamerLegacy',
+      description:
+        'A video game library powered by the RAWG API. Track completed and upcoming games, get release alerts, and share a ranked top 20 with friends.',
+      projectUrl: 'https://gamer-legacy-frontend.vercel.app/home/all',
+    },
+    {
+      title: 'Retro-Terminal Hangman',
+      description:
+        'A retro-inspired hangman game for creating public or private puzzles, sharing them by code, and joining live community sessions.',
+      projectUrl: 'https://pb-hangman-frontend.vercel.app/#/home',
+    },
+    {
+      title: 'Quizzicle',
+      description:
+        'A live, Kahoot-inspired quiz platform. Build and share image-supported quizzes, host multiplayer games, or explore community quizzes solo.',
+      projectUrl: 'https://quizzicle.xyz/',
+    },
+    {
+      title: 'TeamForge',
+      description:
+        'A real-time team and scoreboard tool. Build teams randomly or manually, invite players with a six-character code, and track the game through the winner screen.',
+      projectUrl: 'https://teamforge.buzz/',
+    },
+    {
+      title: 'NexHire',
+      description:
+        'A streamlined recruitment workspace for organizing candidates and job openings, created to support the day-to-day needs of a working recruiter.',
+      projectUrl: 'https://nexhire.xyz/',
+    },
+    {
       title: 'NeoBrutal Hangman',
       description:
         '(Angular, Python, Supabase) A simple hangman game with a NeoBrutalism design UI.',
